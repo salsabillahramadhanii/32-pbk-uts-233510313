@@ -8,6 +8,7 @@
 
     <ul>
       <li v-for="(task, index) in tasks" :key="index">
+        <input type="checkbox" v-model="task.completed" />
         {{ task.name }}
         <button @click="removeTodo(index)">Batal</button>
 
