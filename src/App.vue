@@ -9,7 +9,9 @@
     <ul>
       <li v-for="(task, index) in tasks" :key="index">
         <input type="checkbox" v-model="task.completed" />
+        <span :style="{ textDecoration: task.completed ? 'line-through' : 'none' }">
         {{ task.name }}
+      </span>
         <button @click="removeTodo(index)">Batal</button>
 
       </li>
